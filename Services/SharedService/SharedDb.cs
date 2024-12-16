@@ -32,14 +32,17 @@ public class User {
 public class Booking {
     public int Id { get; set; }
     public int ListingId { get; set; }
-    public int UserId { get; set; }
-    public DateTime CheckIn { get; set; }
-    public DateTime CheckOut { get; set; }
+    public required List<string> GuestNames { get; set; }
+    public DateTime From { get; set; }
+    public DateTime To { get; set; }
 }
 
 public class Listing {
     public int Id { get; set; }
-    public required string Name { get; set; }
+    public required string Title { get; set; }
     public required string Description { get; set; }
     public decimal Price { get; set; }
+    public required string Country { get; set; }
+    public required string City { get; set; }
+    public int NoOfPeople { get; set; }
 }
