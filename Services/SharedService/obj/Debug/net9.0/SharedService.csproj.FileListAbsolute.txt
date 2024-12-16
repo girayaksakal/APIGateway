@@ -1,0 +1,15 @@
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/bin/Debug/net9.0/SharedService.deps.json
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/bin/Debug/net9.0/SharedService.dll
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/bin/Debug/net9.0/SharedService.pdb
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.csproj.AssemblyReference.cache
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.AssemblyInfoInputs.cache
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.AssemblyInfo.cs
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.csproj.CoreCompileInputs.cache
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.sourcelink.json
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.dll
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/refint/SharedService.dll
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.pdb
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/ref/SharedService.dll
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/bin/Debug/net9.0/SharedService.runtimeconfig.json
+/Users/girayaksakal/Desktop/SE4458Assignment2/APIGateway/APIGateway/Services/SharedService/obj/Debug/net9.0/SharedService.genruntimeconfig.cache
