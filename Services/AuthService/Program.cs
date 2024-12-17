@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 // Swagger
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Cors;
 // Database and migrations
 using SharedService;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
+
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowGateway", builder => builder
+        .WithOrigins("http://localhost:5000")
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
 
 // Authentication and Authorization
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
@@ -74,6 +82,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowGateway");
+
 // Enable Swagger
 app.UseSwagger();
 app.UseSwaggerUI(options => {
@@ -84,6 +94,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseRouting();
 
 app.Run();
 
@@ -103,7 +115,7 @@ public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
         {
             options.SwaggerDoc(description.GroupName, new Microsoft.OpenApi.Models.OpenApiInfo
             {
-                Title = $"ShortStay API {description.ApiVersion}",
+                Title = $"AuthService API {description.ApiVersion}",
                 Version = description.ApiVersion.ToString(),
                 Description = description.IsDeprecated
                     ? "This API version has been deprecated."

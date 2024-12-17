@@ -16,6 +16,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowGateway", builder => builder
+        .WithOrigins("http://localhost:5000")
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
+
 // API Versioning
 builder.Services.AddApiVersioning(options => {
     options.AssumeDefaultVersionWhenUnspecified = true;
@@ -55,13 +62,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowGateway");
+
 // Enable Swagger
 app.UseSwagger();
 app.UseSwaggerUI(options => {
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Auth Service API V1");
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Booking Service API V1");
 });
 
 app.MapControllers();
+
+app.UseRouting();
 
 app.Run();
 
@@ -81,7 +92,7 @@ public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
         {
             options.SwaggerDoc(description.GroupName, new Microsoft.OpenApi.Models.OpenApiInfo
             {
-                Title = $"ShortStay API {description.ApiVersion}",
+                Title = $"BookingService API {description.ApiVersion}",
                 Version = description.ApiVersion.ToString(),
                 Description = description.IsDeprecated
                     ? "This API version has been deprecated."

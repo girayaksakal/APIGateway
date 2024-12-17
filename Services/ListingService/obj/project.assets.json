@@ -11317,6 +11317,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.Versioning >= 5.1.0",
       "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer >= 5.1.0",
@@ -11373,6 +11374,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Cors": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
             "version": "[2.2.0, )"

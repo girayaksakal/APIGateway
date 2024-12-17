@@ -1,0 +1,55 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/swagger/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5000
+                }
+            ],
+            "UpstreamPathTemplate": "/swagger/{everything}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/v1/Auth/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Auth/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/v1/Bookings/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Bookings/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/v1/Listings/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Listings/{everything}",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5000"
+    }
+}
